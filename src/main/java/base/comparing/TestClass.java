@@ -21,6 +21,14 @@ import java.util.List;
  */
 public class TestClass {
 
+    /**
+     * This class defines the encoders/decoders used during serialization.
+     * Usually you just create one global singleton (instantiation of this class is very expensive).
+     */
+    private static FSTConfiguration conf = FSTConfiguration.createDefaultConfiguration();
+    private static Kryo kryo = new Kryo();
+    private static ObjectMapper mapper = new ObjectMapper(new SmileFactory());
+
     public static void main(String[] args) throws IOException {
         SimpleObject simpleObject1 = new SimpleObject(1, "simpleObject1", (byte) 1);
         SimpleObject simpleObject2 = new SimpleObject(2, "simpleObject2", (byte) 2);
@@ -50,7 +58,6 @@ public class TestClass {
      * @throws JsonProcessingException
      */
      public static byte[] usingSmile(ComplexObject complexObject) throws JsonProcessingException {
-        ObjectMapper mapper = new ObjectMapper(new SmileFactory());
         byte[] smileData = mapper.writeValueAsBytes(complexObject);
         return smileData;
     }
@@ -62,7 +69,6 @@ public class TestClass {
      * @throws FileNotFoundException
      */
     public static byte[] usingKryo(ComplexObject complexObject) throws FileNotFoundException {
-        Kryo kryo = new Kryo();
         kryo.register(complexObject.getClass());
         ByteArrayOutputStream stream = new ByteArrayOutputStream(127);
         Output output = new Output(stream);
@@ -77,7 +83,6 @@ public class TestClass {
      * @return byte array
      */
     public static byte[] usingFST(ComplexObject complexObject) {
-        FSTConfiguration conf = FSTConfiguration.createDefaultConfiguration();
         byte[] dataFST = conf.asByteArray(complexObject);
         return dataFST;
     }

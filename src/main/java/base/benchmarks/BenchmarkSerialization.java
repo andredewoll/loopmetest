@@ -60,7 +60,7 @@ public class BenchmarkSerialization {
         Options opts = new OptionsBuilder()
                 .include(".*")
                 .mode(Mode.AverageTime)
-                .timeUnit(TimeUnit.MILLISECONDS)
+                .timeUnit(TimeUnit.NANOSECONDS)
                 .resultFormat(ResultFormatType.TEXT)
                 .addProfiler(GCProfiler.class)
                 .build();
