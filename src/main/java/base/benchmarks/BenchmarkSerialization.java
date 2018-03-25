@@ -64,7 +64,6 @@ public class BenchmarkSerialization {
     public static void main(String[] args) throws RunnerException {
         Options opts = new OptionsBuilder()
                 .include(".*")
-                .mode(Mode.AverageTime)
                 .timeUnit(TimeUnit.NANOSECONDS)
                 .resultFormat(ResultFormatType.TEXT)
                 .addProfiler(GCProfiler.class)
