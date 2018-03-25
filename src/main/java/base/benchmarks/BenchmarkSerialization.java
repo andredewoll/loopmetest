@@ -18,10 +18,15 @@ import java.util.Arrays;
 import java.util.List;
 import java.util.concurrent.TimeUnit;
 
+
+/**
+ * Run main method to run benchmark
+ * As we can see, standard java serialization loses in speed for 3-4 times
+ */
 @Warmup(iterations = 4)
 @Measurement(iterations = 4)
 @Fork(value = 2, jvmArgsAppend = "-server")
-@BenchmarkMode(Mode.SingleShotTime)
+@BenchmarkMode(Mode.AverageTime)
 @State(Scope.Benchmark)
 public class BenchmarkSerialization {
     private ComplexObject complexObject1;
