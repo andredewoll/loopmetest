@@ -1,0 +1,49 @@
+Benchmark                                                                      Mode  Cnt     Score      Error   Units
+BenchmarkSerialization.testFST                                                 avgt    8  1478,838 ±  857,668   ns/op
+BenchmarkSerialization.testFST:·gc.alloc.rate                                  avgt    8    92,778 ±   50,260  MB/sec
+BenchmarkSerialization.testFST:·gc.alloc.rate.norm                             avgt    8   200,001 ±    0,001    B/op
+BenchmarkSerialization.testFST:·gc.churn.PS_Eden_Space                         avgt    8    90,114 ±  127,175  MB/sec
+BenchmarkSerialization.testFST:·gc.churn.PS_Eden_Space.norm                    avgt    8   192,724 ±  314,222    B/op
+BenchmarkSerialization.testFST:·gc.churn.PS_Survivor_Space                     avgt    8     0,235 ±    1,224  MB/sec
+BenchmarkSerialization.testFST:·gc.churn.PS_Survivor_Space.norm                avgt    8     0,526 ±    2,753    B/op
+BenchmarkSerialization.testFST:·gc.count                                       avgt    8     6,000             counts
+BenchmarkSerialization.testFST:·gc.time                                        avgt    8    32,000                 ms
+
+
+BenchmarkSerialization.testJavaSerialization                                   avgt    8  4531,156 ± 1592,873   ns/op
+BenchmarkSerialization.testJavaSerialization:·gc.alloc.rate                    avgt    8   685,460 ±  238,188  MB/sec
+BenchmarkSerialization.testJavaSerialization:·gc.alloc.rate.norm               avgt    8  4744,002 ±    0,001    B/op
+BenchmarkSerialization.testJavaSerialization:·gc.churn.PS_Eden_Space           avgt    8   744,133 ±  313,690  MB/sec
+BenchmarkSerialization.testJavaSerialization:·gc.churn.PS_Eden_Space.norm      avgt    8  5247,506 ± 2458,874    B/op
+BenchmarkSerialization.testJavaSerialization:·gc.churn.PS_Survivor_Space       avgt    8     0,023 ±    0,049  MB/sec
+BenchmarkSerialization.testJavaSerialization:·gc.churn.PS_Survivor_Space.norm  avgt    8     0,183 ±    0,464    B/op
+BenchmarkSerialization.testJavaSerialization:·gc.count                         avgt    8    17,000             counts
+BenchmarkSerialization.testJavaSerialization:·gc.time                          avgt    8    20,000                 ms
+
+
+BenchmarkSerialization.testKryo                                                avgt    8  1577,153 ±  368,195   ns/op
+BenchmarkSerialization.testKryo:·gc.alloc.rate                                 avgt    8  1833,542 ±  418,565  MB/sec
+BenchmarkSerialization.testKryo:·gc.alloc.rate.norm                            avgt    8  4488,001 ±    0,001    B/op
+BenchmarkSerialization.testKryo:·gc.churn.PS_Eden_Space                        avgt    8  1830,876 ±  425,720  MB/sec
+BenchmarkSerialization.testKryo:·gc.churn.PS_Eden_Space.norm                   avgt    8  4487,356 ±  571,250    B/op
+BenchmarkSerialization.testKryo:·gc.churn.PS_Survivor_Space                    avgt    8     0,052 ±    0,052  MB/sec
+BenchmarkSerialization.testKryo:·gc.churn.PS_Survivor_Space.norm               avgt    8     0,130 ±    0,136    B/op
+BenchmarkSerialization.testKryo:·gc.count                                      avgt    8    71,000             counts
+BenchmarkSerialization.testKryo:·gc.time                                       avgt    8    82,000                 ms
+
+
+BenchmarkSerialization.testSmile                                               avgt    8   894,004 ±  172,539   ns/op
+BenchmarkSerialization.testSmile:·gc.alloc.rate                                avgt    8   729,347 ±  138,346  MB/sec
+BenchmarkSerialization.testSmile:·gc.alloc.rate.norm                           avgt    8  1016,000 ±    0,001    B/op
+BenchmarkSerialization.testSmile:·gc.churn.PS_Eden_Space                       avgt    8   733,520 ±  264,416  MB/sec
+BenchmarkSerialization.testSmile:·gc.churn.PS_Eden_Space.norm                  avgt    8  1019,158 ±  320,534    B/op
+BenchmarkSerialization.testSmile:·gc.churn.PS_Survivor_Space                   avgt    8     0,026 ±    0,051  MB/sec
+BenchmarkSerialization.testSmile:·gc.churn.PS_Survivor_Space.norm              avgt    8     0,034 ±    0,064    B/op
+BenchmarkSerialization.testSmile:·gc.count                                     avgt    8    15,000             counts
+BenchmarkSerialization.testSmile:·gc.time                                      avgt    8    54,000                 ms
+
+
+CPU:
+Intel® Core™ i3-2100 CPU @ 3.10GHz × 4
+7,5 GB RAM
+HDD 500GB
